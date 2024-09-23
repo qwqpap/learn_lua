@@ -1,0 +1,3437 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<resource version="2.3.0.1" xmlns="http://www.wxwidgets.org/wxxrc">
+	<object class="wxFrame" name="LuaSTG Editor">
+		<style>wxDEFAULT_FRAME_STYLE</style>
+		<bg>#ECE9D8</bg>
+		<title>LuaSTG Editor</title>
+		<icon>images/paste.png</icon>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALL</flag>
+				<border>0</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxALIGN_TOP|wxALL</flag>
+						<border>0</border>
+						<option>1</option>
+						<object class="wxNotebook" name="ID_NOTEBOOK">
+							<style>wxNB_DEFAULT|wxNO_BORDER</style>
+							<object class="notebookpage">
+								<label>General</label>
+								<object class="wxPanel" name="PanelGeneral">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_folder">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/folder.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_codeblock">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/codeblock.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_if">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/if.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_variable">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/variable.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_repeat">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/repeat.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_code">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/code.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_comment">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/comment.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_patch">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/patch.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Stage</label>
+								<object class="wxPanel" name="PanelStage">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stagegroup">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stagegroup.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stagegroupinfo">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stagegroupinfo.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stage">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stage.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stagegoto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stagegoto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stagefinish">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stagefinish.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stagefinishgroup">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stagefinishgroup.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bgstage">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bgstage.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setworlds">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setworlds.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_addworld">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/addworld.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Task</label>
+								<object class="wxPanel" name="PanelTask">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_task">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/task.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_tasker">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/tasker.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskwait">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskwait.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskrepeat">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskrepeat.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskbreak">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskbreak.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskmoveto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskmoveto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskBeziermoveto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskBeziermoveto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskCRmoveto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskCRmoveto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskB2moveto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskB2moveto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskreturn">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskreturn.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskclear">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskclear.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_signal">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/signal.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskwaitfor">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskwaitfor.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskwaitto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskwaitto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskattach">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskattach.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskmovetoex">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskmovetoex.png</bitmap>
+											</object>
+										</object><object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskBeziermovetoex">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskBeziermovetoex.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskCRmovetoex">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskCRmovetoex.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskB2movetoex">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskB2movetoex.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_tasksetvalue">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/tasksetvalue.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Enemy</label>
+								<object class="wxPanel" name="PanelEnemy">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_enemydefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/enemydefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_enemycreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/enemycreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_enemysimple">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/enemysimple.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Boss</label>
+								<object class="wxPanel" name="PanelBoss">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bossdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bossdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bossspellcard">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bossspellcard.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bossmoveto">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bossmoveto.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_dialog">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/dialog.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_sentence">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/sentence.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_taskbosswander">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/taskbosswander.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bosscast">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bosscast.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bossshowaura">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bossshowaura.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bosssetui">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bosssetui.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_pactrometer">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/pactrometer.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_chargeball">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/chargeball.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_explode">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/explode.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bosscreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bosscreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bgdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bgdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bglayer">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bglayer.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Bullet</label>
+								<object class="wxPanel" name="PanelBullet">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletcreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletcreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletchangestyle">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletchangestyle.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletcreatestraight">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletcreatestraight.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletcreatestraightex">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletcreatestraightex.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletclear">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletclear.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_bulletcleanrange">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/bulletcleanrange.png</bitmap>
+											</object>
+										</object>
+										<!-- <object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_archiexpand">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/archiexpand.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_archirotate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/archirotate.png</bitmap>
+											</object>
+										</object> -->
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Laser</label>
+								<object class="wxPanel" name="PanelLaser">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_lasercreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/lasercreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserturnhalfon">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserturnhalfon.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserturnon">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserturnon.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserturnoff">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserturnoff.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_lasergrow">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/lasergrow.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserchange">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserchange.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserbentdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserbentdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_laserbentcreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/laserbentcreate.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Object</label>
+								<object class="wxPanel" name="PanelObject">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_objectdefine">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/objectdefine.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_objectcreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/objectcreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setcolor">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setcolor.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_objectsetimg">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/objectsetimg.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_properties">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/properties.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_listcreate">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/listcreate.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_listadd">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/listadd.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_listforeach">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/listforeach.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_renderimage">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/renderimage.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Unit</label>
+								<object class="wxPanel" name="PanelUnit">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_callbackfunc">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/callbackfunc.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_defaultaction">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/defaultaction.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setv">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setv.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setaccel">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setaccel.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setgravity">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setgravity.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setfv">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setfv.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_unitkill">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/unitkill.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_unitdel">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/unitdel.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_unitpreserve">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/unitpreserve.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_unitforeach">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/unitforeach.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_connect">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/connect.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setrelpos">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setrelpos.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Audio</label>
+								<object class="wxPanel" name="PanelAudio">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadsound">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadsound.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_playsound">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/playsound.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxGROW|wxALL</flag>
+											<border>5</border>
+											<object class="wxStaticLine" name="wxID_STATIC">
+												<style>wxLI_VERTICAL</style>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadbgm">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadbgm.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_playbgm">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/playbgm.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_pausebgm">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/pausebgm.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_resumebgm">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/resumebgm.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_stopbgm">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/stopbgm.png</bitmap>
+											</object>
+										</object>
+										 <object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_setpace">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/setpace.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Resource</label>
+								<object class="wxPanel" name="PanelResource">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadimage">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadimage.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadani">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadani.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadparticle">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadparticle.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadimagegroup">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadimagegroup.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadtexture">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadtexture.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_loadFX">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/loadFX.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_FileAddIntoPack">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/pack.png</bitmap>
+												<default>0</default>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="notebookpage">
+								<label>Effects</label>
+								<object class="wxPanel" name="PanelEffects">
+									<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+									<object class="wxBoxSizer">
+										<orient>wxHORIZONTAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_shakescreen">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/shakescreen.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_dropitem">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/dropitem.png</bitmap>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+											<border>0</border>
+											<object class="wxBitmapButton" name="Insert_smear">
+												<style>wxBU_AUTODRAW</style>
+												<bitmap>images/smear.png</bitmap>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALL</flag>
+				<border>1</border>
+				<option>1</option>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxGROW|wxLEFT</flag>
+						<border>1</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<flag>wxGROW|wxRIGHT|wxTOP|wxBOTTOM</flag>
+								<border>1</border>
+								<option>1</option>
+								<object class="wxHtmlWindow" name="LogWindow">
+									<size>200,150</size>
+									<style>wxHW_SCROLLBAR_AUTO|wxDOUBLE_BORDER</style>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxGROW|wxRIGHT|wxTOP|wxBOTTOM</flag>
+								<border>1</border>
+								<object class="wxPanel" name="ID_PANEL">
+									<style>wxDOUBLE_BORDER|wxTAB_TRAVERSAL</style>
+									<bg>#FFFFFF</bg>
+									<object class="wxBoxSizer">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<flag>wxALIGN_LEFT|wxALL</flag>
+											<border>3</border>
+											<object class="wxStaticText" name="TypeNameLabel">
+												<style>wxALIGN_CENTRE</style>
+												<bg>#FFFFFF</bg>
+												<label>Node type: project</label>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxBOTTOM</flag>
+								<border>1</border>
+								<object class="wxFlexGridSizer">
+									<cols>3</cols>
+									<rows>0</rows>
+									<vgap>0</vgap>
+									<hgap>0</hgap>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL1">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel1">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo1">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton1">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL2">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel2">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo2">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton2">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL3">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel3">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo3">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton3">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL4">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel4">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo4">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton4">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL5">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel5">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo5">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton5">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL6">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel6">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo6">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton6">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL7">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel7">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo7">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton7">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL8">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel8">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo8">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton8">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL9">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel9">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo9">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton9">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL10">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel10">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo10">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton10">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL11">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel11">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo11">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton11">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL12">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel12">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo12">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton12">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL13">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel13">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo13">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton13">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>1</border>
+										<object class="wxPanel" name="ID_PANEL14">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel14">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>1</border>
+										<object class="wxComboBox" name="AttrCombo14">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton14">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxGROW|wxGROW|wxTOP|wxBOTTOM</flag>
+										<border>0</border>
+										<object class="wxPanel" name="ID_PANEL15">
+											<style>wxNO_BORDER|wxTAB_TRAVERSAL</style>
+											<bg>#D0D0D0</bg>
+											<object class="wxBoxSizer">
+												<orient>wxHORIZONTAL</orient>
+												<object class="spacer">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>2</border>
+													<size>5,5</size>
+												</object>
+												<object class="sizeritem">
+													<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+													<border>0</border>
+													<option>1</option>
+													<object class="wxStaticText" name="AttrLabel15">
+														<size>128,-1</size>
+														<label></label>
+													</object>
+												</object>
+											</object>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxComboBox" name="AttrCombo15">
+											<size>144,-1</size>
+											<style>wxCB_DROPDOWN</style>
+											<enabled>0</enabled>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+										<border>0</border>
+										<object class="wxButton" name="AttrButton15">
+											<size>24,-1</size>
+											<enabled>0</enabled>
+											<label>...</label>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>1</border>
+						<option>1</option>
+						<object class="wxTreeCtrl" name="LeftTree">
+							<size>256,-1</size>
+							<style>wxTR_HAS_BUTTONS |wxTR_SINGLE</style>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxToolBar" name="ToolBar">
+			<style>wxTB_FLAT|wxTB_DOCKABLE|wxTB_HORIZONTAL</style>
+			<bitmapsize>24,24</bitmapsize>
+			<object class="tool" name="ToolNew">
+				<bitmap>images/new.png</bitmap>
+				<tooltip>Create a new project(Ctrl+N)</tooltip>
+			</object>
+			<object class="tool" name="ToolOpen">
+				<bitmap>images/open.png</bitmap>
+				<tooltip>Open a project(Ctrl+O)</tooltip>
+			</object>
+			<object class="tool" name="ToolSave">
+				<bitmap>images/save.png</bitmap>
+				<tooltip>Save the project(Ctrl+S)</tooltip>
+			</object>
+			<object class="tool" name="ToolMerge">
+				<bitmap>images/merge.png</bitmap>
+				<tooltip>Open a project and merge into current project</tooltip>
+			</object>
+			<object class="separator">
+			</object>
+			<object class="tool" name="ToolUndo">
+				<bitmap>images/undo.png</bitmap>
+				<tooltip>Undo(Ctrl+Z)</tooltip>
+			</object>
+			<object class="tool" name="ToolRedo">
+				<bitmap>images/redo.png</bitmap>
+				<tooltip>Redo(Ctrl+Y)</tooltip>
+			</object>
+			<object class="separator">
+			</object>
+			<object class="tool" name="ToolDelete">
+				<bitmap>images/delete.png</bitmap>
+				<tooltip>Delete(Del)</tooltip>
+			</object>
+			<object class="tool" name="ToolCopy">
+				<bitmap>images/copy.png</bitmap>
+				<tooltip>Copy(Ctrl+C)</tooltip>
+			</object>
+			<object class="tool" name="ToolCut">
+				<bitmap>images/cut.png</bitmap>
+				<tooltip>Cut(Ctrl+X)</tooltip>
+			</object>
+			<object class="tool" name="ToolPaste">
+				<bitmap>images/paste.png</bitmap>
+				<tooltip>Paste(Ctrl+V)</tooltip>
+			</object>
+			<object class="separator">
+			</object>
+			<object class="tool" name="ToolSetting">
+				<bitmap>images/setting.png</bitmap>
+				<tooltip>Settings</tooltip>
+			</object>
+			<object class="tool" name="ToolPack">
+				<bitmap>images/pack.png</bitmap>
+				<tooltip>Build current project(F7)</tooltip>
+			</object>
+			<object class="tool" name="ToolDebugStage">
+				<bitmap>images/debugstage.png</bitmap>
+				<tooltip>Debug stage from current node(F6)</tooltip>
+			</object>
+			<object class="tool" name="ToolDebugSC">
+				<bitmap>images/debugsc.png</bitmap>
+				<tooltip>Debug spell card(Shift+F6)</tooltip>
+			</object>
+			<object class="tool" name="ToolRun">
+				<bitmap>images/run.png</bitmap>
+				<tooltip>Run whole project(F5)</tooltip>
+			</object>
+			<object class="separator">
+			</object>
+			<object class="tool" name="ToolInsertAfter">
+				<bitmap>images/down.png</bitmap>
+				<tooltip>Insert after</tooltip>
+				<radio>1</radio>
+			</object>
+			<object class="tool" name="ToolInsertBefore">
+				<bitmap>images/up.png</bitmap>
+				<tooltip>Insert before</tooltip>
+				<radio>1</radio>
+			</object>
+			<object class="tool" name="ToolInsertChild">
+				<bitmap>images/child.png</bitmap>
+				<tooltip>Insert as child</tooltip>
+				<radio>1</radio>
+			</object>
+			<object class="separator">
+			</object>
+			<object class="wxTextCtrl" name="LineNumText">
+				<size>48,-1</size>
+			</object>
+			<object class="tool" name="ToolFind">
+				<bitmap>images/find.png</bitmap>
+				<tooltip>go to line number</tooltip>
+			</object>
+			<object class="separator">
+			 </object>
+			  <object class="tool" name="ToolMoveDown">
+				<bitmap>images/down.png</bitmap>
+				<tooltip>Move down</tooltip>
+			</object>
+			<object class="tool" name="ToolMoveUp">
+				<bitmap>images/up.png</bitmap>
+				<tooltip>Move up</tooltip>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="New Project">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>New Project</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxHORIZONTAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+				<border>10</border>
+				<object class="wxStaticBitmap" name="wxID_STATIC">
+					<size>96,192</size>
+					<style>wxNO_BORDER</style>
+					<bitmap>images/left image.png</bitmap>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="wxID_STATIC">
+							<label>1. Choose a template.
+2. Specify file path and name.</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<object class="wxListBox" name="ListTemplate">
+							<size>-1,74</size>
+							<style>wxLB_SINGLE|wxDOUBLE_BORDER</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<object class="wxFilePickerCtrl" name="FilePickerNewProj">
+							<style>wxFLP_DEFAULT_STYLE|wxFLP_SAVE|wxFLP_OVERWRITE_PROMPT</style>
+							<message>Save project</message>
+							<wildcard>LuaSTG project (*.luastg)|*.luastg</wildcard>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticLine" name="wxID_STATIC">
+							<style>wxLI_HORIZONTAL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStdDialogButtonSizer">
+							<object class="button">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="wxID_OK">
+									<label>&amp;OK</label>
+								</object>
+							</object>
+							<object class="button">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="wxID_CANCEL">
+									<label>&amp;Cancel</label>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Edit Text">
+		<style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Edit Text</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_LEFT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="EditAttrLabel">
+					<label>attribute</label>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALL</flag>
+				<border>5</border>
+				<option>1</option>
+				<object class="wxTextCtrl" name="EditAttrText">
+					<size>384,256</size>
+					<style>wxTE_MULTILINE|wxTE_PROCESS_ENTER|wxTE_PROCESS_TAB|wxWANTS_CHARS</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Setting">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Settings</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer" name="wxID_ANY">
+					<orient>wxVERTICAL</orient>
+					<label>Debug</label>
+					<object class="sizeritem">
+						<flag>wxALIGN_LEFT|wxALL</flag>
+						<border>0</border>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>0</rows>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="wxID_STATIC">
+									<label>Resolution X</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ResXText">
+									<size>48,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="wxID_STATIC">
+									<label>Resolution Y</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ResYText">
+									<size>48,-1</size>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_LEFT|wxALL</flag>
+						<border>5</border>
+						<object class="wxCheckBox" name="WindowedCheckBox">
+							<label>Run LuaSTG in window mode</label>
+							<checked>0</checked>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_LEFT|wxALL</flag>
+						<border>5</border>
+						<object class="wxCheckBox" name="CheatCheckBox">
+							<label>Cheat</label>
+							<checked>0</checked>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_LEFT|wxALL</flag>
+						<border>5</border>
+						<object class="wxCheckBox" name="UpdateLibCheckBox">
+							<label>Update THlib before running</label>
+							<checked>0</checked>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Sound Effect">
+		<style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Sound Effect</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALL</flag>
+				<border>5</border>
+				<option>1</option>
+				<object class="wxListBox" name="SoundListBox">
+					<size>192,256</size>
+					<style>wxLB_SINGLE|wxLB_SORT</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Type">
+		<style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxCLOSE_BOX|wxMAXIMIZE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Type</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxGROW|wxALL</flag>
+				<border>5</border>
+				<option>1</option>
+				<object class="wxListBox" name="TypeListBox">
+					<size>192,256</size>
+					<style>wxLB_SINGLE|wxLB_SORT</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Image">
+		<style>wxCAPTION|wxRESIZE_BORDER|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Image</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<option>1</option>
+						<object class="wxListBox" name="ImageListBox">
+							<size>192,-1</size>
+							<style>wxLB_SINGLE|wxLB_SORT</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALL</flag>
+						<border>5</border>
+						<object class="wxPanel" name="ImagePrevPanel">
+							<size>256,256</size>
+							<style>wxTAB_TRAVERSAL</style>
+						</object>
+					</object>
+					
+				</object>
+			</object>
+			<object class="sizeritem">
+					<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+					<border>5</border>
+					<object class="wxTextCtrl" name="imageString">
+						<size>192,-1</size>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+				
+			</object>
+			
+		</object>
+	</object>
+	<object class="wxDialog" name="Input Parameter">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Input Parameter</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>0</rows>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel1">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText1">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel2">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText2">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel3">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText3">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel4">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText4">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel5">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText5">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel6">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText6">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel7">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText7">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel8">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText8">
+									<size>192,-1</size>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<cols>2</cols>
+							<rows>0</rows>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel9">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText9">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel10">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText10">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel11">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText11">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel12">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText12">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel13">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText13">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel14">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText14">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel15">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText15">
+									<size>192,-1</size>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="ParamNameLabel16">
+									<size>96,-1</size>
+									<label></label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ParamText16">
+									<size>192,-1</size>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<cols>2</cols>
+					<rows>0</rows>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Input Type Name">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Input Type Name</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<cols>2</cols>
+					<rows>0</rows>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="wxID_STATIC">
+							<label>Type name</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="TypeNameText">
+							<size>192,-1</size>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="wxID_STATIC">
+							<label>Difficulty</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxGROW|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<option>1</option>
+						<object class="wxComboBox" name="DifficultyCombo">
+							<style>wxCB_DROPDOWN</style>
+							<content>
+								<item>All</item>
+								<item>Easy</item>
+								<item>Normal</item>
+								<item>Hard</item>
+								<item>Lunatic</item>
+							</content>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Enemy Style">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Enemy Style</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<cols>4</cols>
+					<rows>0</rows>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style1">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy1.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style2">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy2.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style3">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy3.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style4">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy4.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style5">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy5.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style6">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy6.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style7">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy7.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style8">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy8.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style10">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy10.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style11">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy11.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style12">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy12.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style13">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy13.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style15">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy15.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style16">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy16.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style17">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy17.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style18">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy18.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style19">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy19.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style20">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy20.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style21">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy21.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style22">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy22.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style23">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy23.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style24">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy24.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style25">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy25.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style26">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy26.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style9">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy9.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style14">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy14.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style27">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy27.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style28">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy28.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style29">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy29.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style30">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy30.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style31">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy31.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style32">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy32.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style33">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy33.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="Style34">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/enemy/enemy34.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Bullet Style">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Bullet Style</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<cols>4</cols>
+					<rows>0</rows>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="scale">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/scale.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="arrow">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/arrow.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="chain">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/chain.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="bullet">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/bullet.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="butterfly">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/butterfly.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="ofuda">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/ofuda.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="point">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/point.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="smallball">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/smallball.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="circle">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/circle.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="middleball">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/middleball.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="bigball">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/bigball.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="lightball">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/lightball.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="smallstar">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/smallstar.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="bigstar">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/bigstar.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="grain">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/grain.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="needle">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/needle.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="blackgrain">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/blackgrain.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="drip">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/drip.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="sword">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/sword.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="knife">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/knife.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="fire">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/fire.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="mildew">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/mildew.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="ellipse">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/ellipse.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="heart">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/heart.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="money">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/money.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="music">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/music.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="silence">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/silence.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="fire_dark">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/fire_dark.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="bigball_dark">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/bigball_dark.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="lightball_dark">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/bullet/lightball_dark.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="Select Color">
+		<style>wxCAPTION|wxSYSTEM_MENU|wxCLOSE_BOX|wxMINIMIZE_BOX|wxDIALOG_MODAL|wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_BLOCK_EVENTS</exstyle>
+		<title>Select Color</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<cols>4</cols>
+					<rows>0</rows>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_RED">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_RED.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_DEEP_RED">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_DEEP_RED.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_PURPLE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_PURPLE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_DEEP_PURPLE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_DEEP_PURPLE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_BLUE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_BLUE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_DEEP_BLUE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_DEEP_BLUE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_ROYAL_BLUE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_ROYAL_BLUE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_CYAN">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_CYAN.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_DEEP_GREEN">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_DEEP_GREEN.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_GREEN">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_GREEN.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_CHARTREUSE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_CHARTREUSE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_YELLOW">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_YELLOW.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_GOLDEN_YELLOW">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_GOLDEN_YELLOW.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_ORANGE">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_ORANGE.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_DEEP_GRAY">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_DEEP_GRAY.png</bitmap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>0</border>
+						<object class="wxBitmapButton" name="COLOR_GRAY">
+							<size>64,64</size>
+							<style>wxBU_AUTODRAW</style>
+							<bitmap>images/color/COLOR_GRAY.png</bitmap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

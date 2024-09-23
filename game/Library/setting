@@ -1,0 +1,41 @@
+{
+	"keysys": {
+		"repslow": 16,
+		"menu": 27,
+		"repfast": 17,
+		"snapshot": 36,
+		"retry": 82
+	},
+	"keys": {
+		"right": 39,
+		"left": 37,
+		"slow": 16,
+		"up": 38,
+		"down": 40,
+		"spell": 88,
+		"shoot": 90,
+		"special": 67
+	},
+	"timezone": 8,
+	"bgmvolume": 100,
+	"windowed": false,
+	"res": 1,
+	"resx": 640,
+	"resy": 480,
+	"mod": "test",
+	"font": "",
+	"vsync": false,
+	"keys2": {
+		"right": 99,
+		"left": 97,
+		"slow": 65,
+		"up": 101,
+		"down": 98,
+		"spell": 68,
+		"shoot": 83,
+		"special": 70
+	},
+	"username": "User",
+	"sevolume": 100,
+	"allowsnapshot": true
+}

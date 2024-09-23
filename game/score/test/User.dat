@@ -1,0 +1,23 @@
+{
+	"difficulty_select": 2,
+	"player_select": 1,
+	"hiscore": {
+		"Stage 1@Easy@reimu_player": 0,
+		"Stage 4@Easy@reimu_player": 0,
+		"Stage 3@Easy@reimu_player": 0,
+		"Stage 2@Easy@reimu_player": 0,
+		"Spell Card@Spell Card@reimu_player": 1812490,
+		"Stage 6@Easy@reimu_player": 0,
+		"Stage 5@Easy@reimu_player": 0
+	},
+	"spell_card_hist": {
+		"All": {
+			"SpellCard": {
+				"reimu_player": [
+					2,
+					9
+				]
+			}
+		}
+	}
+}

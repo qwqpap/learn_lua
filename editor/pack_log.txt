@@ -1,0 +1,42 @@
+
+C:\pico\lua\learn_lua\editor>del "..\game\mod\test.zip" 
+
+C:\pico\lua\learn_lua\editor>..\tools\toutf8\toutf8 .\editor\tmp\_editor_output.lua 
+
+C:\pico\lua\learn_lua\editor>..\tools\7z\7z u -tzip -mcu=on "..\game\mod\test.zip" .\editor\root.lua .\editor\tmp\_editor_output.lua 
+
+7-Zip [32] 15.05 beta : Copyright (c) 1999-2015 Igor Pavlov : 2015-06-14
+
+Scanning the drive:
+2 files, 2346 bytes (3 KiB)
+
+Creating archive: ..\game\mod\test.zip
+
+Items to compress: 2
+
+
+Files read from disk: 2
+Archive size: 1334 bytes (2 KiB)
+Everything is Ok
+
+C:\pico\lua\learn_lua\editor>..\tools\7z\7z u -tzip -mcu=on "..\game\mod\test.zip" "C:\pico\lua\learn_lua\works\source\image\actor\cau_bg.jpg" 
+
+7-Zip [32] 15.05 beta : Copyright (c) 1999-2015 Igor Pavlov : 2015-06-14
+
+Open archive: ..\game\mod\test.zip
+--
+Path = ..\game\mod\test.zip
+Type = zip
+Physical Size = 1334
+
+Scanning the drive:
+1 file, 34657 bytes (34 KiB)
+
+Updating archive: ..\game\mod\test.zip
+
+Items to compress: 1
+
+
+Files read from disk: 1
+Archive size: 34445 bytes (34 KiB)
+Everything is Ok

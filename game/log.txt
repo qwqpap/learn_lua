@@ -1,0 +1,143 @@
+[INFO]  开始初始化 版本: luaSTG-0.1
+[INFO]  开始初始化Lua虚拟机 版本: LuaJIT 2.1.0-beta3
+[INFO]  初始化对象池 上限=32768
+[INFO]  加载初始化脚本'launch'
+[INFO]  加载资源包'data'
+[WARN]  找不到资源包'data'
+[INFO]  初始化fancy2d 版本 0.6 (分辨率: 480x640 垂直同步: false 窗口化: true)
+[INFO]  CPU 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz GenuineIntel / GPU Intel(R) Iris(R) Xe Graphics
+[INFO]  装载脚本'lib\Llog.lua'
+[INFO]  装载脚本'lib\Ldebug.lua'
+[INFO]  装载脚本'lib\Lglobal.lua'
+[INFO]  装载脚本'lib\Lmath.lua'
+[INFO]  装载脚本'plus\plus.lua'
+[INFO]  装载脚本'plus\Utility.lua'
+[INFO]  装载脚本'plus\NativeAPI.lua'
+[INFO]  装载脚本'plus\IO.lua'
+[INFO]  装载脚本'plus\Replay.lua'
+[INFO]  装载脚本'ex\ex.lua'
+[INFO]  装载脚本'lib\Lobject.lua'
+[INFO]  装载脚本'lib\Lresources.lua'
+[INFO]  装载脚本'lib\Lscreen.lua'
+[INFO]  装载脚本'lib\Linput.lua'
+[INFO]  装载脚本'lib\Ltask.lua'
+[INFO]  装载脚本'lib\Lstage.lua'
+[INFO]  装载脚本'lib\Ltext.lua'
+[INFO]  装载脚本'lib\Lscoredata.lua'
+[INFO]  装载脚本'lib\Lplugin.lua'
+[INFO]  初始化成功完成
+[INFO]  装载脚本'launcher.lua'
+[INFO]  装载脚本'THlib\THlib.lua'
+[INFO]  装载脚本'THlib\WalkImageSystem.lua'
+[INFO]  装载脚本'THlib\DNHWalkImageSystem.lua'
+[INFO]  装载脚本'THlib\DNHRenderObject.lua'
+[INFO]  装载脚本'THlib\eventListener.lua'
+[INFO]  装载脚本'THlib\misc\misc.lua'
+[INFO]  装载脚本'THlib\se\se.lua'
+[INFO]  装载脚本'THlib\music\music.lua'
+[INFO]  装载脚本'THlib\item\item.lua'
+[INFO]  装载脚本'THlib\player\player.lua'
+[INFO]  装载脚本'THlib\player\player_system.lua'
+[INFO]  装载脚本'__init__.lua'
+[INFO]  装载脚本'THlib\player\reimu\reimu.lua'
+[INFO]  装载脚本'__init__.lua'
+[INFO]  装载脚本'THlib\player\sakuya\sakuya.lua'
+[INFO]  装载脚本'__init__.lua'
+[INFO]  装载脚本'THlib\player\marisa\marisa.lua'
+[INFO]  装载脚本'THlib\enemy\enemy.lua'
+[INFO]  装载脚本'THlib\enemy\boss.lua'
+[INFO]  装载脚本'THlib\enemy\boss_system.lua'
+[INFO]  装载脚本'THlib\enemy\boss_function.lua'
+[INFO]  装载脚本'THlib\enemy\boss_card.lua'
+[INFO]  装载脚本'THlib\enemy\boss_dialog.lua'
+[INFO]  装载脚本'THlib\enemy\boss_other.lua'
+[INFO]  装载脚本'THlib\enemy\boss_ui.lua'
+[INFO]  装载脚本'THlib\bullet\bullet.lua'
+[INFO]  装载脚本'THlib\laser\laser.lua'
+[INFO]  装载脚本'THlib\laser\bent laser.lua'
+[INFO]  装载脚本'THlib\background\background.lua'
+[INFO]  装载脚本'THlib\background\temple\temple.lua'
+[INFO]  装载脚本'THlib\background\spellcard\spellcard.lua'
+[INFO]  装载脚本'THlib\background\background_addon.lua'
+[INFO]  装载脚本'THlib\background\ball\ball.lua'
+[INFO]  装载脚本'THlib\background\bamboo\bamboo.lua'
+[INFO]  装载脚本'THlib\background\bamboo2\bamboo2.lua'
+[INFO]  装载脚本'THlib\background\BG_A1\BG_A1.lua'
+[INFO]  装载脚本'THlib\background\cube\cube.lua'
+[INFO]  装载脚本'THlib\background\galaxy\galaxy.lua'
+[INFO]  装载脚本'THlib\background\gensokyosora\gensokyosora.lua'
+[INFO]  装载脚本'THlib\background\gzz_stage04bg\gzz_stage04bg.lua'
+[INFO]  装载脚本'THlib\background\gzz_stg6bg\gzz_stg6bg.lua'
+[INFO]  装载脚本'THlib\background\hongmoguan\stage3bg.lua'
+[INFO]  装载脚本'THlib\background\hongmoguanB\hongmoguanB.lua'
+[INFO]  装载脚本'THlib\background\icepool\icepool.lua'
+[INFO]  装载脚本'THlib\background\lake\lake.lua'
+[INFO]  装载脚本'THlib\background\le03_5\le03_5.lua'
+[INFO]  装载脚本'THlib\background\magic_forest\magic_forest.lua'
+[INFO]  装载脚本'THlib\background\magic_forest_fast\magic_forest_fast.lua'
+[INFO]  装载脚本'THlib\background\river\river.lua'
+[INFO]  装载脚本'THlib\background\stage3bg\stage3bg.lua'
+[INFO]  装载脚本'THlib\background\stage4bg\stage4bg.lua'
+[INFO]  装载脚本'THlib\background\starlight\starlight.lua'
+[INFO]  装载脚本'THlib\background\temple2\temple2.lua'
+[INFO]  装载脚本'THlib\background\temple3\temple3.lua'
+[INFO]  装载脚本'THlib\background\tkz_stage3\stage3bg.lua'
+[INFO]  装载脚本'THlib\background\world\world.lua'
+[INFO]  装载脚本'THlib\background\woods\woods.lua'
+[INFO]  装载脚本'THlib\ext\ext.lua'
+[INFO]  装载脚本'THlib\ext\ext_pause_menu.lua'
+[INFO]  装载脚本'THlib\ext\ext_replay.lua'
+[INFO]  装载脚本'THlib\ext\ext_stage_group.lua'
+[INFO]  装载脚本'THlib\UI\menu.lua'
+[INFO]  装载脚本'THlib\editor.lua'
+[INFO]  装载脚本'THlib\bulletex\Archimedes.lua'
+[INFO]  装载脚本'THlib\bulletex\Queue.lua'
+[INFO]  装载脚本'THlib\bulletex\Heap.lua'
+[INFO]  装载脚本'THlib\bulletex\List.lua'
+[INFO]  装载脚本'THlib\bulletex\Array.lua'
+[INFO]  装载脚本'THlib\bulletex\Class.lua'
+[INFO]  装载脚本'THlib\bulletex\BulletEx.lua'
+[INFO]  装载脚本'THlib\UI\UI.lua'
+[INFO]  装载脚本'THlib\UI\uiconfig.lua'
+[INFO]  装载脚本'THlib\UI\font.lua'
+[INFO]  装载脚本'THlib\UI\title.lua'
+[INFO]  装载脚本'THlib\UI\sc_pr.lua'
+[INFO]  装载脚本'sp\sp.lua'
+[INFO]  脚本日志：[sp] installing
+[INFO]  装载脚本'sp\spboss.lua'
+[INFO]  脚本日志：[spboss] Installing
+[INFO]  脚本日志：[spboss] complete
+[WARN]  LoadTexture: 纹理'dialog_box'已存在，试图使用'THlib\enemy\dialog_box.png'加载的操作已被取消
+[WARN]  LoadImage: 图像'dialog_box'已存在，加载操作已被取消
+[INFO]  脚本日志：[spboss][card] Add a card for id "boss_dialog"
+[INFO]  脚本日志：[spboss] SpellCard Additional Library install
+[INFO]  装载脚本'sp\spmath.lua'
+[INFO]  脚本日志：[spmath] installing
+[INFO]  脚本日志：[spmath] complete
+[INFO]  装载脚本'sp\spmisc.lua'
+[INFO]  脚本日志：[spmisc] installing
+[INFO]  脚本日志：[spmisc] complete
+[INFO]  装载脚本'sp\spstring.lua'
+[INFO]  脚本日志：[spstring] Installing
+[INFO]  脚本日志：[spstring] Complete
+[INFO]  脚本日志：[sp] install complete
+[INFO]  开始游戏循环
+[INFO]  视频模式切换成功 (480x640 Vsync:false Windowed:true) -> (640x480 Vsync:false(false) Windowed:false)
+[INFO]  装载脚本'root.lua'
+[INFO]  装载脚本'THlib.lua'
+[INFO]  装载脚本'__init__.lua'
+[INFO]  装载脚本'ColliCheck.lua'
+[INFO]  装载脚本'_editor_output.lua'
+[INFO]  脚本日志：Set	none	init	nil
+[INFO]  关卡资源池已清空
+[INFO]  脚本日志：Set	none	menu	nil
+[INFO]  关卡资源池已清空
+[INFO]  脚本日志：Set	save	Spell Card@Spell Card	nil
+[INFO]  关卡资源池已清空
+[INFO]  结束游戏循环
+[INFO]  已清空对象池
+[INFO]  已清空所有资源
+[INFO]  已卸载fancy2d
+[INFO]  已卸载Lua虚拟机
+[INFO]  已卸载所有资源包
+[INFO]  框架销毁
