@@ -8,7 +8,7 @@ C:\pico\lua\learn_lua\editor>..\tools\7z\7z u -tzip -mcu=on "..\game\mod\test.zi
 7-Zip [32] 15.05 beta : Copyright (c) 1999-2015 Igor Pavlov : 2015-06-14
 
 Scanning the drive:
-2 files, 2346 bytes (3 KiB)
+2 files, 2351 bytes (3 KiB)
 
 Creating archive: ..\game\mod\test.zip
 
@@ -16,7 +16,7 @@ Items to compress: 2
 
 
 Files read from disk: 2
-Archive size: 1334 bytes (2 KiB)
+Archive size: 1337 bytes (2 KiB)
 Everything is Ok
 
 C:\pico\lua\learn_lua\editor>..\tools\7z\7z u -tzip -mcu=on "..\game\mod\test.zip" "C:\pico\lua\learn_lua\works\source\image\actor\cau_bg.jpg" 
@@ -27,7 +27,7 @@ Open archive: ..\game\mod\test.zip
 --
 Path = ..\game\mod\test.zip
 Type = zip
-Physical Size = 1334
+Physical Size = 1337
 
 Scanning the drive:
 1 file, 34657 bytes (34 KiB)
@@ -38,5 +38,5 @@ Items to compress: 1
 
 
 Files read from disk: 1
-Archive size: 34445 bytes (34 KiB)
+Archive size: 34448 bytes (34 KiB)
 Everything is Ok

@@ -10,17 +10,17 @@
 		"right": 39,
 		"left": 37,
 		"slow": 16,
-		"up": 38,
 		"down": 40,
-		"spell": 88,
+		"up": 38,
+		"special": 67,
 		"shoot": 90,
-		"special": 67
+		"spell": 88
 	},
 	"timezone": 8,
-	"bgmvolume": 100,
-	"windowed": false,
-	"res": 1,
+	"allowsnapshot": true,
 	"resx": 640,
+	"res": 1,
+	"windowed": false,
 	"resy": 480,
 	"mod": "test",
 	"font": "",
@@ -29,13 +29,13 @@
 		"right": 99,
 		"left": 97,
 		"slow": 65,
-		"up": 101,
 		"down": 98,
-		"spell": 68,
+		"up": 101,
+		"special": 70,
 		"shoot": 83,
-		"special": 70
+		"spell": 68
 	},
 	"username": "User",
 	"sevolume": 100,
-	"allowsnapshot": true
+	"bgmvolume": 100
 }

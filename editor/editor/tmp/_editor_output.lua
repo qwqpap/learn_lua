@@ -5,13 +5,13 @@ _mod_version=4096
 _allow_practice=true
 _allow_sc_practice=true
 
-_editor_class["Boss"]=boss.define("Boss","CAU",240,384,spellcard_background,"All",nil,nil,"cau_bg.jpg",4,4,16,16,8,{4,4,4,4},{1,1,1})
+_editor_class["Boss"]=boss.define("Boss","CAU",240,384,spellcard_background,"All",nil,nil,"cau_bg.jpg",0.5,0.5,16,16,8,{4,4,4,4},{1,1,1})
 table.insert(_editor_class["Boss"].cards,boss.move.New(0,144,60,MOVE_NORMAL))
 _tmp_sc=boss.card.New("SpellCard",2,15,60,600,{0,0,0},false)
 function _tmp_sc:init()
     lasttask=task.New(self,function()
         do for _=1,_infinite do
-            _create_bullet_group(ball_huge,COLOR_RED,self.x,self.y,5,0,3,4,270,90,false,0,true,true,0,false,self)
+            _create_bullet_group(ball_huge,COLOR_RED,self.x,self.y,10,0,3,4,270,90,false,0,true,true,0,false,self)
             task._Wait(20)
         end end
     end)

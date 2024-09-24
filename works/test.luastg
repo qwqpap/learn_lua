@@ -35,8 +35,8 @@
 					[3]="240,384",
 					[4]="",
 					[5]="source\\image\\actor\\cau_bg.jpg",
-					[6]="4",
-					[7]="4",
+					[6]="0.5",
+					[7]="0.5",
 					[8]="16,16",
 					[9]="8",
 					[10]="",
@@ -45,6 +45,7 @@
 					[13]="1,1,1",
 				},
 				["type"]="bossdefine",
+				["expand"]=true,
 				["child"]={
 					[1]={
 						["attr"]={
@@ -112,7 +113,7 @@
 															[1]="ball_huge",
 															[2]="COLOR_RED",
 															[3]="self.x,self.y",
-															[4]="5",
+															[4]="10",
 															[5]="0",
 															[6]="3",
 															[7]="4",
@@ -126,9 +127,10 @@
 															[15]="false",
 														},
 														["type"]="bulletcreatestraightex",
-														["expand"]=false,
 														["child"]={
 														},
+														["expand"]=false,
+														["select"]=true,
 													},
 													[2]={
 														["attr"]={
@@ -156,8 +158,6 @@
 						},
 					},
 				},
-				["expand"]=true,
-				["select"]=true,
 			},
 		},
 	},
